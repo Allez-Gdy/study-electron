@@ -1,0 +1,31 @@
+{
+  "name": "studyele",
+  "private": true,
+  "version": "0.0.0",
+  "main": "dist/main/index.cjs",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/watch.mjs",
+    "prebuild": "vue-tsc --noEmit --p packages/renderer/tsconfig.json && node scripts/build.mjs",
+    "build": "electron-builder",
+    "preview": "vite preview"
+  },
+  "env": {
+    "VITE_DEV_SERVER_HOST": "127.0.0.1",
+    "VITE_DEV_SERVER_PORT": 3347
+  },
+  "dependencies": {
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "electron": "^19.0.3",
+    "electron-builder": "^23.0.3",
+    "typescript": "^4.5.4",
+    "vite": "^2.9.9",
+    "vite-plugin-electron": "^0.4.4",
+    "vite-plugin-resolve": "^2.1.1",
+    "vue-tsc": "^0.34.7",
+    "vue": "^3.2.33"
+  }
+}
